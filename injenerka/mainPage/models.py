@@ -2,9 +2,6 @@ from django.db import models
 from decimal import *
 
 
-
-# Create your models here.
-
 class Customer(models.Model):
 
     serName = models.CharField(max_length=30, verbose_name='Фамилия клиента')
@@ -40,6 +37,7 @@ class Product(models.Model):
 class Cart(models.Model):
 
     customer = models.ForeignKey(Customer, verbose_name=("Покупатель"), on_delete=models.CASCADE)
+    
 
     def __str__(self):
         return self.user
@@ -117,4 +115,3 @@ class Rating(models.Model):
 
     def __str__(self):
         return 'Коментарий клиента'.format(self.product.title)
-    
