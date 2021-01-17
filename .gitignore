@@ -86,4 +86,7 @@ local_settings.py
 .env
 db.sqlite3
 
+### Мои файлы ###
 документалка
+.vscode
+venv

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mainPage.apps.MainpageConfig',
     'rest_framework'
+    # 'sait.apps.SaitConfig'
 ]
 
 MIDDLEWARE = [

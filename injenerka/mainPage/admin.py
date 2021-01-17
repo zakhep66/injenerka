@@ -3,17 +3,6 @@ from mainPage.models import Customer, Product, Cart, CartProduct, Order, Product
 from django.forms import ModelForm
 
 
-# class ProductAdminForm(ModelForm):
-
-#     minResol = (400, 400)
-
-#     def __init__(self, *args, **kwargs):
-#         super().__init__(*args, **kwargs)
-#         self.fields["img"].help_text = "Загружайте изображение с минимальным разрешением {}x{}".format(*self.minResol)
-
-
-
-
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'description', 'category', 'price', 'img') # какие поля будут видны в списке
     list_display_links = ('id', 'title')
@@ -112,3 +101,7 @@ class RatingAdmin(admin.ModelAdmin):
     list_filter = ('product', 'customer', 'rating') # по каким параметрам можем фильтровать
 
 admin.site.register(Rating, RatingAdmin)
+
+
+
+# from import_export.admin import ImportExportModelAdmin

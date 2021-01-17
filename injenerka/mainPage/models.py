@@ -2,7 +2,6 @@ from django.db import models
 from decimal import*
 from django.contrib.auth import get_user_model
 
-# User = get_user_model()
 
 class Customer(models.Model):
 
@@ -25,7 +24,7 @@ class Product(models.Model):
 
     title = models.CharField(max_length=100, verbose_name='Название продукта')
     description = models.TextField(verbose_name='Описание продукта', null=True)
-    category = models.CharField(max_length=50, verbose_name='Категория продукта')
+    category = models.CharField(max_length=50, verbose_name='Категория продукта', default='product')
     price = models.DecimalField(max_digits=9, verbose_name='Цена продукта', decimal_places=2)
     img = models.ImageField(verbose_name="Картинка", null=True)
 
@@ -42,7 +41,7 @@ class CartProduct(models.Model):
 
     product = models.ForeignKey(Product, verbose_name="Продукт", on_delete=models.CASCADE)
     user = models.ForeignKey(Customer, verbose_name="Покупатель", on_delete=models.CASCADE, null=True)
-    qty = models.PositiveIntegerField(default=1, verbose_name="Количество")
+    qty = models.PositiveIntegerField(default=0, verbose_name="Количество")
     final_price = models.DecimalField(max_digits=9, decimal_places=2, verbose_name="Общая цена", default=0)
     product = models.ManyToManyField('Cart', blank=True, related_name="related_cart")
 
@@ -78,9 +77,10 @@ class ProductOrder(models.Model):
 
     product = models.ForeignKey(Product, verbose_name="Продукт", on_delete=models.CASCADE)
     order = models.ForeignKey(Order, verbose_name="Заказ", on_delete=models.CASCADE)
+    # owner = models.ForeignKey(Customer, verbose_name="Владелец карзины", on_delete=models.CASCADE)
 
     def __str__(self):
-        return 'Продукт для заказа {}'.format(self.product.title)
+        return '{}'.format(self.product)
 
 
 class ImgProduct(models.Model):

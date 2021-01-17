@@ -1,4 +1,4 @@
-from .models import *
+from .models import Customer, Cart, CartProduct, Product, Order, ProductOrder, ImgProduct, Login, TableOrders, Rating
 from rest_framework import viewsets, permissions
 from .serializers import CustomerSerializer, CartSerializer, CartProductSerializer, ProductSerializer, OrderSerializer, ProductOrderSerializer, ImgProductSerializer, LoginSerializer, TableOrdersSerializer, RatingSerializer
 

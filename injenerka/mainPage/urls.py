@@ -3,69 +3,27 @@ from .api import CustomerViewSet, CartViewSet, CartProductViewSet, ProductViewSe
 
 
 router = routers.DefaultRouter() # роутер по умолчанию
+
+
 router.register('api/customer', CustomerViewSet, 'customer') # регаем api.url с QuerySet
 
-urlpatterns = router.urls
-
-
-
-router = routers.DefaultRouter() # роутер по умолчанию
 router.register('api/cartproduct', CartProductViewSet, 'cartproduct') # регаем api.url с QuerySet
 
-urlpatterns = router.urls
-
-
-
-router = routers.DefaultRouter() # роутер по умолчанию
 router.register('api/cart', CartViewSet, 'cart') # регаем api.url с QuerySet
 
-urlpatterns = router.urls
-
-
-
-router = routers.DefaultRouter() # роутер по умолчанию
 router.register('api/product', ProductViewSet, 'product') # регаем api.url с QuerySet
 
-urlpatterns = router.urls
-
-
-
-router = routers.DefaultRouter() # роутер по умолчанию
 router.register('api/order', OrderViewSet, 'order') # регаем api.url с QuerySet
 
-urlpatterns = router.urls
-
-
-
-router = routers.DefaultRouter() # роутер по умолчанию
 router.register('api/productorder', ProductOrderViewSet, 'productorder') # регаем api.url с QuerySet
 
-urlpatterns = router.urls
-
-
-
-router = routers.DefaultRouter() # роутер по умолчанию
 router.register('api/imgproduct', ImgProductViewSet, 'imgproduct') # регаем api.url с QuerySet
 
-urlpatterns = router.urls
-
-
-
-router = routers.DefaultRouter() # роутер по умолчанию
 router.register('api/login', LoginViewSet, 'login') # регаем api.url с QuerySet
 
-urlpatterns = router.urls
-
-
-
-router = routers.DefaultRouter() # роутер по умолчанию
 router.register('api/tableorders', TableOrdersViewSet, 'tableorders') # регаем api.url с QuerySet
 
-urlpatterns = router.urls
-
-
-
-router = routers.DefaultRouter() # роутер по умолчанию
 router.register('api/rating', RatingViewSet, 'rating') # регаем api.url с QuerySet
+
 
 urlpatterns = router.urls

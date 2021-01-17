@@ -1,4 +1,4 @@
-#!d:\#unik\injenerka\venv\scripts\python.exe
+#!d:\1unik\injenerka\venv\scripts\python.exe
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 
