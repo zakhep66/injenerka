@@ -89,4 +89,4 @@ db.sqlite3
 ### Мои файлы ###
 документалка
 .vscode
-venv
+venv/
