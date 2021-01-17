@@ -1,3 +1,4 @@
+venv
 ### OSX ###
 .DS_Store
 .AppleDouble
@@ -88,5 +89,5 @@ db.sqlite3
 
 ### Мои файлы ###
 документалка
-*venv
+
 .vscode
